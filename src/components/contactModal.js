@@ -5,8 +5,7 @@ export default class ContactModal extends Component {
         return ( <
             div >
             <
-            MDBContainer >
-            fgfg { /* <MDBBtn color="primary" onClick={this.props.toggleModal}>Medium modal</MDBBtn> */ } <
+            MDBContainer > { /* <MDBBtn color="primary" onClick={this.props.toggleModal}>Medium modal</MDBBtn> */ } <
             MDBModal isOpen = { this.props.isOpen }
             toggle = { this.props.toggleModal } >
             <
@@ -20,10 +19,10 @@ export default class ContactModal extends Component {
             <
             MDBBtn color = "secondary"
             onClick = { this.props.toggleModal } > Close < /MDBBtn> <
-            MDBBtn color = "primary" > Save changes < /MDBBtn> <
-            /MDBModalFooter> <
-            /MDBModal> <
-            /MDBContainer> <
+            MDBBtn color = "primary" > Save changes < /MDBBtn> < /
+            MDBModalFooter > <
+            /MDBModal> < /
+            MDBContainer > <
             /div>
         )
     }

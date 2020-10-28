@@ -25,19 +25,19 @@ export default class ContactMe extends Component {
 
     render() {
         return ( <
-            div >
+            div className = "section" >
             <
             MDBContainer >
             <
             MDBRow >
             <
-            MDBCol lg = "8" >
+            MDBCol lg = "12" >
             <
             MDBRow >
             <
             MDBCol >
             <
-            p className = "h5 text-center mb-4" > Contact Me < /p> < /
+            p className = " sectionTitle h1-responsive font-weight-bold mb-4" > Contact Me < /p> < /
             MDBCol > <
             /MDBRow> <
             form >
