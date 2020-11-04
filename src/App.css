@@ -47,12 +47,13 @@
     background-color: rgb(54, 54, 54);
 }
 
-.sectionTitle {
-    color: palevioletred;
+
+
+.myNavBar {
+    background-image: linear-gradient(90deg, #ee5e93, #252525)!important;
 }
-.myNavBar{
-    background-image: linear-gradient(90deg,#ee5e93,#252525)!important;
-}
+
+
 /* General Styles - start */
 
 body {
@@ -70,9 +71,10 @@ a {
     color: white;
 }
 
-/* .section {
+
+ .section {
     padding-top: 100px;
-} */
+}
 
 .sectionTitle {
     text-align: center;
@@ -175,8 +177,13 @@ a.aTag:hover:before {
     border-bottom: 1px solid #ffffff;
 }
 
+.marginTop {
+    margin-top: 75px;
+}
 
 /* General Styles - end */
+
+
 /* Welcome section - start */
 
 #welcome {
@@ -189,7 +196,6 @@ a.aTag:hover:before {
 }
 
 .overlay {
-    
     background-position: right center;
     background-size: cover;
     filter: blur(6px);
@@ -235,6 +241,56 @@ a.aTag:hover:before {
     z-index: 5;
     position: relative;
 }
+
 .distinct-color {
     color: #e22b6f;
 }
+
+ /* About Me  */
+
+ #aboutMeSection {
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.aboutMeOverlay {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+}
+
+.segmentTitle {
+    color: #ffffff;
+    font-family: "Pacifico", cursive;
+    line-height: 2;
+    text-align: center;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.activeSegmentTitle {
+    color: #e22b6f;
+    border-bottom: solid 1px #e22b6f;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+.descriptionP {
+    width: 80%;
+    margin-left: 10%;
+    text-align: justify;
+    font-family: montserrat, sans-serif;
+}
+
+p.eventDate {
+    text-align: center;
+    color: #e22a6b;
+    font-family: "Pacifico", cursive;
+}
+
+
+/* About Me */

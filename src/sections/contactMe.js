@@ -9,6 +9,7 @@ export default class ContactMe extends Component {
             modal2: false,
             name: null,
             email: null,
+            color: "red",
         }
     }
 
@@ -20,7 +21,9 @@ export default class ContactMe extends Component {
         // }
         this.setState({ modal2: !this.state.modal2 })
     }
-
+    toggleMe = () => {
+        this.setState({ color: !this.state.color })
+    }
 
 
     render() {
@@ -37,7 +40,11 @@ export default class ContactMe extends Component {
             <
             MDBCol >
             <
-            p className = " sectionTitle h1-responsive font-weight-bold mb-4" > Contact Me < /p> < /
+            p className = " sectionTitle h1-responsive font-weight-bold mb-4"
+            onMouseOver = {
+                () => this.toggleMe()
+            } >
+            Contact Me < /p> < /
             MDBCol > <
             /MDBRow> <
             form >

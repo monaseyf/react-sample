@@ -1,45 +1,128 @@
 import React, { useState } from "react";
-import {
-MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler,
- MDBCollapse, MDBFormInline,
-MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem
-} from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MDBNavbar, MDBNavbarBrand } from "mdbreact";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Link, Element } from "react-scroll";
+import { elastic as Menu } from "react-burger-menu";
 
 function Nav() {
 
-     const [isOpen, toggleIsOpen] = useState(true);
+    const [isOpen, toggleIsOpen] = useState(false);
 
-    return ( 
-        <Router>
-        <MDBNavbar  dark expand="md"  className="myNavBar">
-          <MDBNavbarBrand>
-          <img
-                src={require("../images/logo.png")}
-                className="fluid logo_img"
-                alt="logo"
-              />
-          </MDBNavbarBrand>
-          <MDBNavbarToggler  onClick={() =>toggleIsOpen (!isOpen) }/>
-          <MDBCollapse id="navbarCollapse3"  navbar>
-            <MDBNavbarNav left>
-              <MDBNavItem active>
-                <MDBNavLink to="#!">Home</MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink to="#!">About me</MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink to="#!">Skills</MDBNavLink>
-              </MDBNavItem>
-              
-            </MDBNavbarNav>
-            <MDBNavbarNav right>
-             
-            </MDBNavbarNav>
-          </MDBCollapse>
-        </MDBNavbar>
-      </Router>
+    return ( <div>
+        <header>
+          <Router id="outer-container">
+            <MDBNavbar
+              className="myNavBar"
+              fixed="top"
+              dark
+              scrolling
+              transparent
+            >
+              <MDBNavbarBrand href="/">
+                <img
+                  src={require("../images/logo.png")}
+                  className="fluid logo_img"
+                  alt="logo"
+                />
+              </MDBNavbarBrand>
+              <Menu
+                right
+                pageWrapId={"page-wrap"}
+                outerContainerId={"outer-container"}
+                isOpen={isOpen}
+              >
+                {/* <main id="page-wrap"> */}
+                <Link
+                  to="Welcome"
+                  spy={true}
+                  smooth={true}
+                  duration={1200}
+                  onClick={() => {
+                    toggleIsOpen(true);
+                    toggleIsOpen(false);
+                  }}
+                >
+                  <a id="home" className="aTag" href="/">
+                    Home
+                  </a>
+                </Link>
+                <Link
+                  to="AboutMe"
+                  spy={true}
+                  smooth={true}
+                  duration={1200}
+                  onClick={() => {
+                    toggleIsOpen(true);
+                    toggleIsOpen(false);
+                  }}
+                >
+                  <a id="about" className="aTag" href="/">
+                    About Me
+                  </a>
+                </Link>
+                <Link
+                  to="Portfolio"
+                  spy={true}
+                  smooth={true}
+                  duration={1200}
+                  onClick={() => {
+                    toggleIsOpen(true);
+                    toggleIsOpen(false);
+                  }}
+                >
+                  <a id="Portfolio" className="aTag" href="/">
+                  Portfolio
+                  </a>
+                </Link>
+                <Link
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  duration={1200}
+                  onClick={() => {
+                    toggleIsOpen(true);
+                    toggleIsOpen(false);
+                  }}
+                >
+                  <a id="ContactMe" className="aTag" href="/">
+                    Skills
+                  </a>
+                </Link>
+                <Link
+                  to="recommendation"
+                  spy={true}
+                  smooth={true}
+                  duration={1200}
+                  onClick={() => {
+                    toggleIsOpen(true);
+                    toggleIsOpen(false);
+                  }}
+                >
+                  <a id="contact" className="aTag" href="/">
+                  recommendation
+                  </a>
+                </Link>
+                <Link
+                  to="contactMe"
+                  spy={true}
+                  smooth={true}
+                  duration={1200}
+                  onClick={() => {
+                    toggleIsOpen(true);
+                    toggleIsOpen(false);
+                  }}
+                >
+                  <a id="contact" className="aTag" href="/">
+                    Contact Me
+                  </a>
+                </Link>
+  
+                {/* </main> */}
+              </Menu>
+            </MDBNavbar>
+          </Router>
+        </header>
+      </div>
     )
 }
 
