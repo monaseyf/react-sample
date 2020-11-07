@@ -11,7 +11,8 @@ function AboutMe() {
     };
 
     return (
-        <section id="aboutMeSection" className="section"
+        
+             <section id="aboutMeSection" className="section"
             style={
                 { backgroundImage: `url(${require("../images/aboutMe/" +
                 activeSegment +
@@ -117,12 +118,12 @@ function AboutMe() {
                                 </MDBAnimation>
                             )
                         }
-                    
-                       
                     </MDBCol>
                 </MDBRow>
             </MDBContainer>
         </section>
+    
+       
     )
 }
 

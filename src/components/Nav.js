@@ -36,7 +36,7 @@ function Nav() {
                   to="Welcome"
                   spy={true}
                   smooth={true}
-                  duration={1200}
+                  duration={500}
                   onClick={() => {
                     toggleIsOpen(true);
                     toggleIsOpen(false);
@@ -50,7 +50,7 @@ function Nav() {
                   to="AboutMe"
                   spy={true}
                   smooth={true}
-                  duration={1200}
+                  duration={500}
                   onClick={() => {
                     toggleIsOpen(true);
                     toggleIsOpen(false);
@@ -64,7 +64,7 @@ function Nav() {
                   to="Portfolio"
                   spy={true}
                   smooth={true}
-                  duration={1200}
+                  duration={500}
                   onClick={() => {
                     toggleIsOpen(true);
                     toggleIsOpen(false);
@@ -75,38 +75,38 @@ function Nav() {
                   </a>
                 </Link>
                 <Link
-                  to="skills"
+                  to="Skills"
                   spy={true}
                   smooth={true}
-                  duration={1200}
+                  duration={500}
                   onClick={() => {
                     toggleIsOpen(true);
                     toggleIsOpen(false);
                   }}
                 >
-                  <a id="ContactMe" className="aTag" href="/">
+                  <a id="Skills" className="aTag" href="/">
                     Skills
                   </a>
                 </Link>
                 <Link
-                  to="recommendation"
+                  to="Recom"
                   spy={true}
                   smooth={true}
-                  duration={1200}
+                  duration={500}
                   onClick={() => {
                     toggleIsOpen(true);
                     toggleIsOpen(false);
                   }}
                 >
-                  <a id="contact" className="aTag" href="/">
+                  <a id="Recom" className="aTag" href="/">
                   recommendation
                   </a>
                 </Link>
                 <Link
-                  to="contactMe"
+                  to="ContactMe"
                   spy={true}
                   smooth={true}
-                  duration={1200}
+                  duration={500}
                   onClick={() => {
                     toggleIsOpen(true);
                     toggleIsOpen(false);

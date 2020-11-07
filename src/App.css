@@ -294,3 +294,120 @@ p.eventDate {
 
 
 /* About Me */
+
+/* Portfolio */
+
+#portfolioSection {
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.categoryContainer {
+    min-height: 80vh;
+    position: relative;
+    background-size: cover;
+    filter: grayscale(100%);
+    transform: scale(0.95);
+    transition: all 500ms;
+    /* background-position: center; */
+}
+
+.categoryContainer:hover {
+    filter: grayscale(0%);
+    transform: scale(0.99);
+    cursor: pointer;
+}
+
+.categoryContainer:hover>.categoryTitle {
+    color: #e22b6f;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.categoryTitle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.45);
+    font-family: "Pacifico", cursive;
+    transition: all 500ms;
+}
+
+@media (max-width: 992px) {
+    .categoryContainer {
+        min-height: 40vh;
+        background-position: center;
+    }
+    .sectionTitle {
+        font-size: 12pt;
+    }
+}
+
+
+/* Portfolio */
+
+/* architecture:start */
+
+.archProject {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.archProjectContainer {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-size: cover;
+    border-radius: 5px;
+    position: relative;
+}
+
+.archPhoto {
+    width: 100%;
+    visibility: hidden;
+    border-radius: 5px;
+}
+
+.dataContainer {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 2%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: all 500ms;
+}
+
+.archProjectLabel {
+    color: #e22a6b;
+    font-family: "Pacifico", cursive;
+}
+
+.archProjectInfo {
+    color: #fff;
+    font-family: montserrat, sans-serif;
+}
+
+.archProjectContainer:hover>.dataContainer {
+    background: rgba(0, 0, 0, 0.6);
+    transform: scale(1.03);
+}
+
+@media (max-width: 570px) {
+    .dataContainer {
+        position: unset;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .archProjectContainer {
+        width: 80%;
+        background-position: center;
+    }
+    .sectionTitle {
+        font-size: 12pt;
+    }
+}
+
+
+/* architecture:end */

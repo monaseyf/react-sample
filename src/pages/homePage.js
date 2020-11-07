@@ -6,18 +6,30 @@ import Recommendation from '../sections/recommendation';
 import AboutMe from '../sections/AboutMe';
 import Skills from '../sections/Skills';
 import Portfolio from '../sections/Portfolio';
-
+import { Element } from "react-scroll";
 
 const HomePage = props => {
     return ( < div >
         <Nav />
+     
+    <Element name="Welcome">
         <Welcome />
+      </Element>
+      <Element name="AboutMe">
         <AboutMe />
-        <Portfolio/>
-        <ContactMe />
+      </Element>
+      <Element name="Portfolio">
+        <Portfolio />
+      </Element>
+      <Element name="Skills">
+        <Skills />
+      </Element>
+      <Element name="Recom">
         <Recommendation />
-        <Skills/>
-
+      </Element>
+      <Element name="ContactMe">
+        <ContactMe />
+      </Element>
         </div>
 
     )
